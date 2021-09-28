@@ -1,6 +1,6 @@
 # DynamoDB Research
 
-Capturing set up, processes, thoughts around DynamoDB
+Capturing set up, processes, and thoughts around DynamoDB
 
 ## What is DynamoDB
 
@@ -46,7 +46,7 @@ To work at the command line, you will of course need to have the [AWS CLI](https
 
 The `--endpoint-url ...` must be included for accessing the local DynamoDB instance with the aws cli.
 
-Also, because of the way the aws cli client works, you must still have your aws cli credentials configured. :-/  [Local usage notes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.UsageNotes.html)
+Also, because of the way the aws cli client works, you **must** have your aws cli credentials configured. :-/  [Local usage notes](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.UsageNotes.html)
 
 ```bash
 aws dynamodb list-tables --endpoint-url http://localhost:8000
