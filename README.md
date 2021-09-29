@@ -91,3 +91,5 @@ aws dynamodb list-tables ${=LOCAL}
 
 - [AWS DynamoDB](https://aws.amazon.com/dynamodb) - [Developer Guide](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html) - [API Guide](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/Welcome.html)
 - [DynamoDB Guide](https://www.dynamodbguide.com/what-is-dynamo-db)
+- Generate fake data with [faker.js](https://www.npmjs.com/package/faker)
+
