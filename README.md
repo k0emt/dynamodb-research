@@ -54,14 +54,17 @@ The `--endpoint-url ...` must be included for accessing the local DynamoDB insta
 
 Save yourself some typing, and export this bit of the command to an environment variable.
 
-Here's an example usage getting the list of tables.
-
 ```bash
 export LOCAL="--endpoint-url http://localhost:8000"
+```
+
+Here's an example usage getting the list of tables with bash:
+
+```bash
 aws dynamodb list-tables $LOCAL
 ```
 
-With zsh:
+and with zsh:
 
 ```zsh
 aws dynamodb list-tables ${=LOCAL}
@@ -69,11 +72,30 @@ aws dynamodb list-tables ${=LOCAL}
 
 ### CLI: Create a table
 
+```bash
+aws dynamodb create-table \
+    --table-name Users \
+    --attribute-definitions \
+        AttributeName=Email,AttributeType=S \
+        AttributeName=Name,AttributeType=S \
+    --key-schema \
+        AttributeName=Email,KeyType=HASH \
+        AttributeName=Name,KeyType=RANGE \
+    --provisioned-throughput \
+        ReadCapacityUnits=1,WriteCapacityUnits=1 $LOCAL
+```
+
 ### CLI: Insert an item
 
 ### CLI: Query items
 
 ### CLI: Delete items
+
+### CLI: Drop a table
+
+```bash
+aws dynamodb  delete-table --table-name Users $LOCAL
+```
 
 ## node.js
 
