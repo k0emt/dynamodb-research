@@ -14,6 +14,7 @@ Experienced developer.  Should be comfortable:
 - able to navigate the AWS dashboard
 - has some node.js experience
 - looking for a quick start into DynamoDB
+- familiarity with Docker
 
 ## Why do I care about DynamoDB?
 
