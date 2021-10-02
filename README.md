@@ -237,33 +237,12 @@ ${=LOCAL}
 aws dynamodb delete-table --table-name Users ${=LOCAL}
 ```
 
-## node.js token POC
+## node.js token service
 
-[V3 of the SDK](https://docs.aws.amazon.com/sdk-for-javascript/v3/developer-guide/migrating-to-v3.html) has broken up the monolith.
-
-Create infrustructure code to:
-
-- Create the table
-- Create secondary indexes
-- Delete the table
-
-Create a proof of concept service that:
-
-- stores a TTL, token, query parameters (map), an application ID, feature ID, user ID, and insertion date
-- can be queried by token
-- can be queried by (application ID and user ID)
-- find all entries for a given user ID
-- update parameters given key
-- given key can remove an entry
-- given user ID remove all associated entries (use transaction)
-
-Exercise the service:
-
-- populate the table utilizing faker.js
+A token service that works with DynamoDB is documented in the [`TokenService`](TokenService/README.md) directory.
 
 ## Resource documentation
 
 - [AWS DynamoDB](https://aws.amazon.com/dynamodb) - [Developer Guide](https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Introduction.html) - [API Guide](https://docs.aws.amazon.com/amazondynamodb/latest/APIReference/Welcome.html)
 - [AWS CLI command reference](https://docs.aws.amazon.com/cli/latest/reference/dynamodb/index.html#cli-aws-dynamodb)
 - [DynamoDB Guide](https://www.dynamodbguide.com/what-is-dynamo-db)
-- Generate fake data with [faker.js](https://www.npmjs.com/package/faker)
