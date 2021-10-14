@@ -7,6 +7,8 @@ const VERSION = 1.0;
 
 const app = express();
 
+// TODO: implement route separation https://github.com/expressjs/express/blob/master/examples/route-separation/index.js
+
 app.get("/", function (req, res) {
   response = { serviceName: "token service", version: VERSION };
 
