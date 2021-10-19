@@ -50,6 +50,10 @@ This method echoes back the given parameter in a JSON object.
 
 <https://localhost:8000/echo/something>
 
+## Security
+
+TBD: implement authentication with [OAuth](https://oauth.net/) using [passport](https://www.passportjs.org/)
+
 ## Exercise the service
 
 TBD: create program that will populate the table utilizing faker.js.
