@@ -53,6 +53,7 @@ This method echoes back the given parameter in a JSON object.
 ## Security
 
 TBD: implement authentication with [OAuth](https://oauth.net/) using [passport](https://www.passportjs.org/)
+TBD: or a configurable API key, contemplate access control
 
 ## Exercise the service
 
