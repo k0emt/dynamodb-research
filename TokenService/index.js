@@ -2,24 +2,13 @@ const express = require("express");
 const https = require("https");
 const fs = require("fs");
 
-const PORT = 8000;
-const VERSION = 1.0;
+const bite = require("./bite");
+const config = require("./config");
 
 const app = express();
 
-// TODO: implement route separation https://github.com/expressjs/express/blob/master/examples/route-separation/index.js
-
-app.get("/", function (req, res) {
-  response = { serviceName: "token service", version: VERSION };
-
-  res.send(JSON.stringify(response));
-});
-
-app.get("/echo/:message", function (req, res) {
-  response = { echo: req.params.message };
-
-  res.send(JSON.stringify(response));
-});
+app.get("/", bite.version);
+app.get("/echo/:message", bite.echo);
 
 const options = {
   key: fs.readFileSync("Cert/token-service-key.pem"),
@@ -27,8 +16,8 @@ const options = {
 };
 
 var server = https.createServer(options, app);
-server.listen(PORT, () => {
-  var host = server.address().address;
+server.listen(config.PORT, () => {
+  var host = "localhost"; // server.address().address;
   var port = server.address().port;
   console.log("Token Server listening at http://%s:%s", host, port);
 });

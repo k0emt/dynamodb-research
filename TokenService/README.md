@@ -65,3 +65,5 @@ This will provide the opportunity to observe how the table and indices grow and 
 - [AWS API Guide for Javascript v3](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/index.html) - [DynamoDB](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/clients/client-dynamodb/index.html)
 - [Express API Reference](http://expressjs.com/en/4x/api.html)
 - Generate fake data with [faker.js](https://www.npmjs.com/package/faker)
+- [Route separation](https://github.com/expressjs/express/blob/master/examples/route-separation/index.js
+)
